@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-for tens in range(0, 10):
-    for ones in range(ones + 1, 10):
-        if tens == 8 and ones == 9:
-            print("{}{}".format(tens, ones))
-        else:
-            print("{}{}".format(tens, ones), end=", ")
+number = 0
+while number <= 89:
+    if number % 10 == 0:
+        number += 1 + number // 10
+    print("{:02d}".format(number), end='\n' if number == 89 else ", ")
+    number += 1
