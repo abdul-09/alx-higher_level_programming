@@ -13,6 +13,8 @@ def total_args(argv):
             i += 1
         print("{:d}".format(add))
 
+
 if __name__ == "__main__":
     import sys
+
     total_args(sys.argv)
