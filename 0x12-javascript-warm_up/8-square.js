@@ -4,7 +4,7 @@ const process = require('process');
 const firstArg = process.argv[2];
 const size = parseInt(firstArg);
 
-if (size === 'number') {
+if (!isNaN(size)) {
   if (size > 0) {
     for (let i = 0; i < size; i++) {
       let row = '';
