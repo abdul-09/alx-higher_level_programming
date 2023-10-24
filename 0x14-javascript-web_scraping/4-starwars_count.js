@@ -14,12 +14,10 @@ request(apiUrl, function (error, response, body) {
 
     // count no of movies where "Wedge Antilles" is present
     const moviesWithWedge = results.reduce((count, movie) => {
-      return movie.characters.some(character => character.includes('/18/'))
+      return movie.characters.find((character) => character.endsWith('/18/'))
         ? count + 1 // if found
         : count; // if not found
-    }, 0); // initializing count to zero
-
+    }, 0); // initiliazing count to zero
     console.log(moviesWithWedge);
   }
 });
-
